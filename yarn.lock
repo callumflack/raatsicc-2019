@@ -1532,6 +1532,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.14.tgz#1c1d6e3c75dba466e0326948d56e8bd72a1903d2"
   integrity sha512-u/SJDyXwuihpwjXy7hOOghagLEV1KdAST6syfnOk6QZAMzZuWZqXy5aYYZbh8Jdpd4escVFP0MvftHNDb9pruA==
 
+"@types/node@>=8.1.0":
+  version "12.12.31"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.31.tgz#d6b4f9645fee17f11319b508fb1001797425da51"
+  integrity sha512-T+wnJno8uh27G9c+1T+a1/WYCHzLeDqtsGJkoEdSp2X8RTh3oOCZQcUnjAx90CS8cmmADX51O0FI/tu9s0yssg==
+
 "@types/node@^10.1.0":
   version "10.17.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.6.tgz#1aaabd6f6470a6ac3824ab1e94d731ca1326d93d"
@@ -7240,7 +7245,7 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-netlify-lambda@^1.6.3:
+netlify-lambda@1.6.3:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/netlify-lambda/-/netlify-lambda-1.6.3.tgz#296d65b5f024d4872648f50664cf7a0e62ae8653"
   integrity sha512-nP5Ja6H/FmKSuagOOcLFizUmpuso1bzNvyo3HWU9dCpQ5Kmzt58k4oYUnSNTBc+lsi7ExZokAmtFRMAYAvWWNQ==
@@ -8959,6 +8964,11 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
+qs@^6.6.0:
+  version "6.9.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.3.tgz#bfadcd296c2d549f1dffa560619132c977f5008e"
+  integrity sha512-EbZYNarm6138UKKq46tdx08Yo/q9ZhFoAXAI1meAFd2GtbRDhbZY2WQSICskT0c5q99aFzLG1D4nvTk9tqfXIw==
+
 qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -10093,6 +10103,14 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+stripe@8.37.0:
+  version "8.37.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.37.0.tgz#7abfe911273a3162c3edecad070a52e1dc660da8"
+  integrity sha512-LhfYJuMnvvGYttUHhXiCJ/LfPDZk7tEBjxVZquvC0tFJO+g5WHgjv/PsX6lsmUHA7oRo+4wm4M4vvigtbA69HA==
+  dependencies:
+    "@types/node" ">=8.1.0"
+    qs "^6.6.0"
 
 style-resources-loader@^1.2.1:
   version "1.3.2"

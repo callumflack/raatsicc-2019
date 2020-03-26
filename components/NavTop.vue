@@ -22,7 +22,10 @@
             </span> -->
           </h1>
           <hr class="Nav-tagline-rule" />
-          <NavList />
+          <div class="flex justify-between items-center">
+            <NavList />
+            <DonationButton class="mr-10" />
+          </div>
         </div>
       </div>
     </nav>
@@ -32,11 +35,13 @@
 <script>
 import NavList from "~/components/NavList";
 import NavLogo from "~/components/NavLogo";
+import DonationButton from "~/components/DonationButton";
 
 export default {
   components: {
     NavList,
-    NavLogo
+    NavLogo,
+    DonationButton
   },
   computed: {
     /* currentPageClass() {
