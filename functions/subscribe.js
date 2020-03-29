@@ -7,7 +7,7 @@ const path = require("path");
 const axios = require("axios");
 
 require("dotenv").config({
-  path: path.resolve(process.cwd(), ".env.mailchimp")
+  path: path.resolve(process.cwd(), ".env.mailchimp"),
 });
 
 const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY;
@@ -48,7 +48,7 @@ exports.handler = function(event, context, callback) {
   if (!re.test(email)) {
     return callback(null, {
       statusCode: 400,
-      body: JSON.stringify({ msg: "Invalid Email" })
+      body: JSON.stringify({ msg: "Invalid Email" }),
     });
   }
 
@@ -61,19 +61,19 @@ exports.handler = function(event, context, callback) {
     data: {
       email_address: email,
       merge_fields: {
-        name: parsedBody.name
+        name: parsedBody.name,
       },
-      status: "subscribed"
+      status: "subscribed",
     },
     auth: {
       username: MAILCHIMP_USERNAME,
-      password: MAILCHIMP_API_KEY
-    }
+      password: MAILCHIMP_API_KEY,
+    },
   })
     .then(() => {
       return callback(null, {
         statusCode: 200,
-        body: JSON.stringify({ msg: "Thanks for subscribing!" })
+        body: JSON.stringify({ msg: "Thanks for subscribing!" }),
       });
     })
     .catch(({ response }) => {
@@ -83,8 +83,8 @@ exports.handler = function(event, context, callback) {
         callback(null, {
           statusCode: 200,
           body: JSON.stringify({
-            msg: "You're already subscribed!"
-          })
+            msg: "You're already subscribed!",
+          }),
         });
         return;
       }
@@ -95,8 +95,8 @@ exports.handler = function(event, context, callback) {
         statusCode: 500,
         body: JSON.stringify({
           msg: `Failed to subscribe.`,
-          errorTitle: title
-        })
+          errorTitle: title,
+        }),
       });
     });
 };
