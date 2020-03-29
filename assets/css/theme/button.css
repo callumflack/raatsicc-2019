@@ -41,7 +41,7 @@
   text-transform: var(--button-font-case);
   user-select: none;
   /* responsive alignment of button text (every font has different leading settings) */
-  padding-bottom: calc((2 / 15) * 1em);
+  padding-bottom: calc((1 / 15) * 1em);
 }
 
 /*

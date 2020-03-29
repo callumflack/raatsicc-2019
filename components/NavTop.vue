@@ -88,7 +88,7 @@ export default {
 
 /* .headroom--top .Nav-tagline-rule, */
 .Nav-tagline-rule {
-  @apply border-b border-brand-primary m-0 mt-4 opacity-100;
+  @apply border-brand-primary m-0 mt-4 opacity-100;
   transition: all 250ms ease;
 }
 
