@@ -2,7 +2,7 @@ const path = require("path");
 const Stripe = require("stripe");
 
 require("dotenv").config({
-  path: path.resolve(process.cwd(), ".env")
+  path: path.resolve(process.cwd(), ".env"),
 });
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -15,17 +15,17 @@ exports.handler = async function() {
         name: "Donation",
         amount: 1000,
         currency: "AUD",
-        quantity: 1
-      }
+        quantity: 1,
+      },
     ],
     success_url: "https://www.raatsicc.org.au?donation=success",
-    cancel_url: "https://www.raatsicc.org.au?donation=cancelled"
+    cancel_url: "https://www.raatsicc.org.au?donation=cancelled",
   });
 
   return {
     statusCode: 200,
     body: JSON.stringify({
-      session
-    })
+      session,
+    }),
   };
 };

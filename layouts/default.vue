@@ -20,8 +20,8 @@ import NavBottom from "@/components/NavBottom";
 export default {
   components: {
     NavHeadroom,
-    NavBottom
-  }
+    NavBottom,
+  },
   // head: {
   //   script: [
   //     { src: "https://js.stripe.com/v3/" } // Used for the donation button
