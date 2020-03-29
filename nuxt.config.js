@@ -1,4 +1,4 @@
-const pkg = require("./package");
+import pkg from "./package";
 import config from "./config";
 import { ApolloClient } from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
@@ -46,6 +46,10 @@ module.exports = {
         type: "font/woff",
         crossorigin: true
       }
+    ],
+    // Stripe
+    script: [
+      { src: "https://js.stripe.com/v3/" } // Used for the donation button
     ],
     htmlAttrs: {
       lang: "en"
