@@ -27,21 +27,20 @@ export default {
     }
 
     return {
-      /* prettier-ignore */
       title: `${metaTags.title}`,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: `${metaTags.description}`
-        }
+          content: `${metaTags.description}`,
+        },
       ],
       link: [
         {
           rel: "canonical",
-          href: `${config.SITE_URL}${this.$route.path}`
-        }
-      ]
+          href: `${config.SITE_URL}${this.$route.path}`,
+        },
+      ],
     };
-  }
+  },
 };

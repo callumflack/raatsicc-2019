@@ -96,40 +96,39 @@ export default {
       `,
       prefetch({ route }) {
         return {
-          slug: route.params.post
+          slug: route.params.post,
         };
       },
       variables() {
         return {
-          slug: this.$route.params.post
+          slug: this.$route.params.post,
         };
-      }
-    }
+      },
+    },
   },
   components: {
     ContentColumn,
     LoadingSpinner,
     Post,
-    PostJob
+    PostJob,
   },
   head() {
     return {
-      /* prettier-ignore */
       title: `RAATSICC News | ${this.post.title}`,
       meta: [
         {
           hid: "description",
           name: "description",
-          content: `${this.post.description}`
-        }
+          content: `${this.post.description}`,
+        },
       ],
       link: [
         {
           rel: "canonical",
-          href: `${config.SITE_URL}${this.$route.path}`
-        }
-      ]
+          href: `${config.SITE_URL}${this.$route.path}`,
+        },
+      ],
     };
-  }
+  },
 };
 </script>

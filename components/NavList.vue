@@ -26,8 +26,8 @@ export default {
         return "is-jobs";
       } */
       return null;
-    }
-  }
+    },
+  },
 };
 </script>
 

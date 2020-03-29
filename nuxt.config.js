@@ -1,4 +1,4 @@
-const pkg = require("./package");
+import pkg from "./package";
 import config from "./config";
 import { ApolloClient } from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
@@ -15,11 +15,11 @@ const apolloClient = new ApolloClient({
   link: createHttpLink({
     uri: apolloConfigData.httpEndpoint,
     headers: {
-      Authorization: apolloConfigData.getAuth()
+      Authorization: apolloConfigData.getAuth(),
     },
-    fetch
+    fetch,
   }),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 module.exports = {
@@ -33,7 +33,7 @@ module.exports = {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: pkg.description }
+      { hid: "description", name: "description", content: pkg.description },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     // preload a webfont
@@ -44,12 +44,16 @@ module.exports = {
         href: "/../../fonts/Malabar-LT-W01-Regular.woff",
         as: "font",
         type: "font/woff",
-        crossorigin: true
-      }
+        crossorigin: true,
+      },
+    ],
+    // Stripe
+    script: [
+      { src: "https://js.stripe.com/v3/" }, // Used for the donation button
     ],
     htmlAttrs: {
-      lang: "en"
-    }
+      lang: "en",
+    },
   },
 
   /*
@@ -60,7 +64,18 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["~/assets/css/tailwind.css"],
+  css: [],
+
+  // https://github.com/nuxt-community/tailwindcss-module
+  tailwindcss: {
+    cssPath: "~/assets/css/tailwind.css",
+    purgeCSSInDev: false,
+    exposeConfig: false,
+    purgeCSS: {
+      // whitelist: ["svg-icon", "svg-fill"],
+      // paths: ['components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue']
+    },
+  },
 
   /*
    ** Plugins to load before mounting the App
@@ -71,8 +86,8 @@ module.exports = {
     "~/plugins/vue-svgicon",
     {
       src: "~/plugins/v-lazy-image",
-      ssr: false
-    }
+      ssr: false,
+    },
   ],
 
   /*
@@ -86,7 +101,18 @@ module.exports = {
     "@nuxtjs/proxy",
     "portal-vue/nuxt",
     "@nuxtjs/markdownit",
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
+  ],
+
+  buildModules: [
+    // https://github.com/nuxt-community/gtm-module
+    // "@nuxtjs/gtm",
+    // Doc: https://github.com/nuxt-community/eslint-module
+    "@nuxtjs/eslint-module",
+    // Doc: https://github.com/nuxt-community/stylelint-module
+    "@nuxtjs/stylelint-module",
+    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    "@nuxtjs/tailwindcss",
   ],
 
   /* env: {
@@ -98,18 +124,18 @@ module.exports = {
   proxy: {
     "/.netlify": {
       target: `${baseURL}:9000`,
-      pathRewrite: { "^/.netlify/functions": "" }
-    }
+      pathRewrite: { "^/.netlify/functions": "" },
+    },
   },
 
   router: {
-    middleware: "currentPage"
+    middleware: "currentPage",
   },
 
   apollo: {
     clientConfigs: {
-      default: "~/apollo/config.js"
-    }
+      default: "~/apollo/config.js",
+    },
   },
 
   axios: {},
@@ -118,12 +144,12 @@ module.exports = {
     injected: true,
     html: true,
     linkify: true,
-    use: ["markdown-it-attrs"]
+    use: ["markdown-it-attrs"],
   },
 
   /* https://github.com/nuxt-community/sitemap-module */
   sitemap: {
-    hostname: config.SITE_URL
+    hostname: config.SITE_URL,
   },
 
   /*
@@ -135,8 +161,8 @@ module.exports = {
       // Disable a plugin by passing false as value
       plugins: [
         require("postcss-import"),
-        require("tailwindcss")("./tailwind.config.js")
-      ]
+        require("tailwindcss")("./tailwind.config.js"),
+      ],
     },
     extend(config, ctx) {
       // Run ESLint on save
@@ -145,10 +171,10 @@ module.exports = {
           enforce: "pre",
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         });
       }
-    }
+    },
   },
 
   generate: {
@@ -166,7 +192,7 @@ module.exports = {
               slug
             }
           }
-        `
+        `,
       });
 
       const whatWeDoRoutes = data.data.allWhatSubpages.map(
@@ -176,6 +202,6 @@ module.exports = {
       const postRoutes = data.data.allPosts.map(page => `/news/${page.slug}`);
 
       return [...whatWeDoRoutes, ...postRoutes];
-    }
-  }
+    },
+  },
 };

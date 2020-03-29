@@ -14,11 +14,7 @@
     />
     <div class="Block-inner">
       <h3 class="Title mb-1" :class="colorClass">{{ label }}</h3>
-      <p
-        v-if="sublabel"
-        class="Subheading font-normal italic"
-        :class="colorClass"
-      >
+      <p v-if="sublabel" class="Subheading font-normal italic" :class="colorClass">
         {{ sublabel }}
       </p>
       <div v-if="cta" class="Meta font-medium" :class="ctaClasses">
@@ -34,7 +30,7 @@ import ImageDynamic from "~/components/ImageDynamic";
 
 export default {
   components: {
-    ImageDynamic
+    ImageDynamic,
   },
   props: {
     image: String,
@@ -43,16 +39,16 @@ export default {
     cta: String,
     ctaReposition: {
       type: Boolean,
-      default: false
+      default: false,
     },
     to: String,
     href: String,
-    color: String
+    color: String,
   },
   computed: {
     rootClasses() {
       return [
-        this.color && `bg-brand-${this.color}`
+        this.color && `bg-brand-${this.color}`,
         // this doesn't fuck work WTF?
         // this.to === this.$route.params.page && "is-active"
       ];
@@ -66,7 +62,7 @@ export default {
     ctaClasses() {
       return [
         this.color !== "" && "text-white",
-        { "mt-auto text-right": this.ctaReposition }
+        { "mt-auto text-right": this.ctaReposition },
       ];
     },
     type() {
@@ -77,8 +73,8 @@ export default {
       } else {
         return "div";
       }
-    }
-  }
+    },
+  },
   // mounted() {
   //   console.log(this.$route.params.page);
   // }

@@ -43,14 +43,12 @@ export default {
   computed: {
     /* see: https://sharingbuttons.io/ + http://www.sharelinkgenerator.com/ */
     facebookUrl() {
-      /* prettier-ignore */
       return `https://facebook.com/sharer/sharer.php?u=${baseUrl}/${this.slug}`;
     },
     emailUrl() {
-      /* prettier-ignore */
       return `mailto:?subject=${linkText}&body=${baseUrl}/${this.slug}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

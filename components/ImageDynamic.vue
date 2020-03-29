@@ -26,17 +26,17 @@ export default {
     alt: String,
     cover: {
       type: Boolean,
-      default: false
+      default: false,
     },
     maxWidth: {
       type: Number,
-      default: 2000
-    }
+      default: 2000,
+    },
   },
   data() {
     return {
       url: null,
-      urlPlaceholder: null
+      urlPlaceholder: null,
     };
   },
   mounted() {
@@ -48,7 +48,7 @@ export default {
     const scaledWidth = this.$refs.image.clientWidth * 2;
     const width = Math.min(scaledWidth, this.maxWidth);
     this.url = `${url}&w=${width}`;
-  }
+  },
 };
 </script>
 

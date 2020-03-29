@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div v-if="$apollo.loading" class="Loading">
+      <LoadingSpinner />
+    </div>
     <ContentColumn v-if="page" text>
       <div class="Markdown" v-html="$md.render(page.body)" />
     </ContentColumn>
@@ -8,6 +11,7 @@
 
 <script>
 import ContentColumn from "~/components/ContentColumn.vue";
+import LoadingSpinner from "~/components/LoadingSpinner.vue";
 import gql from "graphql-tag";
 import head, { metaTagsQuery } from "~/mixins/head";
 
@@ -20,13 +24,14 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
   components: {
-    ContentColumn
+    ContentColumn,
+    LoadingSpinner,
   },
   mixins: [head],
-  data: () => ({ page: null })
+  data: () => ({ page: null }),
 };
 </script>
 

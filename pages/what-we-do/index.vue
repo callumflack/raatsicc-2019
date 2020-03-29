@@ -38,7 +38,7 @@ export default {
   components: {
     LoadingSpinner,
     HeroBlocksWhat,
-    ContentColumn
+    ContentColumn,
   },
   apollo: {
     allWhatSubpages: gql`
@@ -57,9 +57,9 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
   mixins: [head],
-  data: () => ({ page: null })
+  data: () => ({ page: null }),
 };
 </script>

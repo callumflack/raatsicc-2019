@@ -50,13 +50,13 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
   components: {
     ContentColumn,
     LoadingSpinner,
     PostArchiveLink,
-    PostExcerpt
+    PostExcerpt,
   },
   mixins: [head],
   data: () => ({ allPosts: [], page: null }),
@@ -64,7 +64,7 @@ export default {
     posts() {
       // map, reduce or filter:
       return this.allPosts.filter(x => x.isStaff).slice(0, 9);
-    }
-  }
+    },
+  },
 };
 </script>

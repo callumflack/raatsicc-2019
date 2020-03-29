@@ -46,12 +46,7 @@
       :href="`tel:${location.phone}`"
       class="block text-gray-600"
     >
-      <icon
-        name="call"
-        height="12"
-        width="12"
-        :class="hideNavBottomIconsOnMobile"
-      />
+      <icon name="call" height="12" width="12" :class="hideNavBottomIconsOnMobile" />
       {{ location.phone }}
     </a>
 
@@ -90,11 +85,11 @@ export default {
       phone: String,
       fax: String,
       onCallContact: String,
-      googleMapLink: String
+      googleMapLink: String,
     },
     details: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
   computed: {
     textSizeClass() {
@@ -102,8 +97,8 @@ export default {
     },
     hideNavBottomIconsOnMobile() {
       return !this.details && "hidden lg:inline-block";
-    }
-  }
+    },
+  },
 };
 </script>
 

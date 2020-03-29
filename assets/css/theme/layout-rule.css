@@ -1,3 +1,3 @@
 .Rule {
-  @apply border-b border-gray-300 m-0;
+  @apply border-t-0 border-b border-gray-300 m-0;
 }

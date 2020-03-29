@@ -14,7 +14,7 @@
 export default {
   props: {
     show: { required: true },
-    preventBackgroundScrolling: { default: true }
+    preventBackgroundScrolling: { default: true },
   },
   watch: {
     show: {
@@ -28,8 +28,8 @@ export default {
           this.preventBackgroundScrolling &&
             document.body.style.removeProperty("overflow");
         }
-      }
-    }
+      },
+    },
   },
   created() {
     const escapeHandler = e => {
@@ -51,8 +51,8 @@ export default {
     },
     dismiss() {
       this.$emit("close");
-    }
-  }
+    },
+  },
 };
 </script>
 

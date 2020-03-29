@@ -5,7 +5,7 @@
 <script>
 export default {
   props: {
-    tag: String
+    tag: String,
   },
   // data: () => ({ tag: "" }),
   computed: {
@@ -19,8 +19,8 @@ export default {
       } else {
         return "/news";
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

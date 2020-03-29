@@ -54,15 +54,15 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
   components: {
     ContentColumn,
     LoadingSpinner,
     PostArchiveLink,
-    PostExcerpt
+    PostExcerpt,
   },
   mixins: [head],
-  data: () => ({ page: null })
+  data: () => ({ page: null }),
 };
 </script>

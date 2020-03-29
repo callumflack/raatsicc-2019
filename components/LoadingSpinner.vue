@@ -10,14 +10,14 @@ export default {
   name: "LoadingSpinner",
   props: {
     size: {
-      default: "60px"
+      default: "60px",
     },
     color: {
-      default: "#d66633"
+      default: "#d66633",
     },
     stroke: {
-      default: "2px"
-    }
+      default: "2px",
+    },
   },
   computed: {
     lineStyles() {
@@ -25,7 +25,7 @@ export default {
         width: this.size,
         height: this.stroke,
         background: this.color,
-        borderRadius: this.stroke
+        borderRadius: this.stroke,
       };
     },
     styles() {
@@ -33,10 +33,10 @@ export default {
       return {
         width: this.size,
         height: this.size,
-        transform: "scale(" + size / 75 + ")"
+        transform: "scale(" + size / 75 + ")",
       };
-    }
-  }
+    },
+  },
 };
 </script>
 

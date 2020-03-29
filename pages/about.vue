@@ -52,7 +52,7 @@ export default {
     CardTeamMember,
     ContentColumn,
     HeroBlocksAbout,
-    LoadingSpinner
+    LoadingSpinner,
   },
   apollo: {
     page: gql`
@@ -77,9 +77,9 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
   mixins: [head],
-  data: () => ({ page: null })
+  data: () => ({ page: null }),
 };
 </script>

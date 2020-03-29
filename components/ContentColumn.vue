@@ -16,7 +16,7 @@
 export default {
   props: {
     article: Boolean,
-    stripe: Boolean
-  }
+    stripe: Boolean,
+  },
 };
 </script>

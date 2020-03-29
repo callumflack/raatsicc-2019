@@ -3,12 +3,7 @@
     <div v-if="$apollo.loading" class="Loading">
       <LoadingSpinner />
     </div>
-    <HeroStripe
-      v-else
-      :image="page.heroImage.url"
-      :alt="page.heroTitle"
-      color="blue"
-    >
+    <HeroStripe v-else :image="page.heroImage.url" :alt="page.heroTitle" color="blue">
       <ContentColumn stripe class="relative">
         <div class="py-4">
           <h1 class="Title text-white">
@@ -73,14 +68,14 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
   components: {
     ContentColumn,
     HeroStripe,
     LoadingSpinner,
     PostArchiveLink,
-    PostExcerpt
+    PostExcerpt,
   },
   mixins: [head],
   data: () => ({ allPosts: [], page: null }),
@@ -89,8 +84,8 @@ export default {
       // map, reduce or filter:
       // return this.allPosts.filter(x => x.tags[0] === "job");
       return this.allPosts.filter(x => x.isJob).slice(0, 9);
-    }
-  }
+    },
+  },
 };
 </script>
 

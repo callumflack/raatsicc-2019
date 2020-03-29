@@ -1,8 +1,6 @@
 <template>
   <div class="Event">
-    <h2
-      class="Heading font-sans font-semibold tracking-normal text-brand-blue py-px"
-    >
+    <h2 class="Heading font-sans font-semibold tracking-normal text-brand-blue py-px">
       {{ title }}
     </h2>
     <p v-if="date" class="Meta text-brand-blue">
@@ -32,8 +30,8 @@ export default {
     title: String,
     date: String,
     isNotOneDay: Boolean,
-    location: String
-  }
+    location: String,
+  },
 };
 </script>
 

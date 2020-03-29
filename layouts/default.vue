@@ -22,6 +22,11 @@ export default {
     NavHeadroom,
     NavBottom
   }
+  // head: {
+  //   script: [
+  //     { src: "https://js.stripe.com/v3/" } // Used for the donation button
+  //   ]
+  // }
 };
 </script>
 

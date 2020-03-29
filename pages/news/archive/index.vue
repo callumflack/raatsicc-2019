@@ -41,13 +41,13 @@ export default {
           isStaff
         }
       }
-    `
+    `,
   },
   components: {
     ContentColumn,
     PostArchiveExcerpt,
-    LoadingSpinner
+    LoadingSpinner,
   },
-  data: () => ({ allPosts: [] })
+  data: () => ({ allPosts: [] }),
 };
 </script>
