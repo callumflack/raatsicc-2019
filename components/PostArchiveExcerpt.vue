@@ -47,7 +47,7 @@ export default {
     date: String,
     event: Boolean,
     staff: Boolean,
-    job: Boolean
-  }
+    job: Boolean,
+  },
 };
 </script>

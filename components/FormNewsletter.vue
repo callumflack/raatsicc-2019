@@ -37,15 +37,15 @@ export default {
       successMsg: null,
       formData: {
         name: "",
-        email: ""
-      }
+        email: "",
+      },
     };
   },
   methods: {
     async subscribeToNewsletter(body) {
       const response = await fetch("/.netlify/functions/subscribe", {
         method: "post",
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       });
       const json = await response.json();
 
@@ -63,7 +63,7 @@ export default {
       try {
         const response = await this.subscribeToNewsletter({
           email: this.formData.email,
-          name: this.formData.name
+          name: this.formData.name,
         });
 
         if (response instanceof Error) {
@@ -78,8 +78,8 @@ export default {
       } catch (error) {
         this.errorMsg = "Something went wrong… Please email us about this!";
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

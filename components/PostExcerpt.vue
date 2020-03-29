@@ -54,13 +54,13 @@ export default {
     excerpt: String,
     event: Boolean,
     staff: Boolean,
-    job: Boolean
+    job: Boolean,
   },
   computed: {
     figureNoImg() {
       return this.image === null && "height:94%";
-    }
-  }
+    },
+  },
 };
 </script>
 

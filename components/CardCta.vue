@@ -1,12 +1,7 @@
 <template>
   <div class="Card" :class="isOrangeClass">
     <div class="Card-body">
-      <icon
-        :name="cardTypeToIcon(cardName)"
-        height="30"
-        width="30"
-        class="Card-icon"
-      />
+      <icon :name="cardTypeToIcon(cardName)" height="30" width="30" class="Card-icon" />
       <div class="Card-heading Metaheading st-p">
         {{ lede }}
         <br />
@@ -29,7 +24,7 @@ import FormNewsletter from "@/components/FormNewsletter";
 export default {
   components: {
     CfdLink,
-    FormNewsletter
+    FormNewsletter,
   },
   props: {
     /*
@@ -42,26 +37,26 @@ export default {
     lede: String,
     sublede: {
       String,
-      default: "&nbsp;"
+      default: "&nbsp;",
     },
     linkLabel: String,
     href: {
       type: String,
-      default: null
+      default: null,
     },
     to: {
       type: String,
-      default: null
+      default: null,
     },
     orange: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     isOrangeClass() {
       return this.orange && "is-orange";
-    }
+    },
   },
   methods: {
     /*
@@ -77,13 +72,13 @@ export default {
         volunteer: "pan-tool",
         difference: "flag",
         news: "question-answer",
-        facebook: "facebook-solid"
+        facebook: "facebook-solid",
       };
 
       // Type names must be lowercase
       return typeToIconMap[type.toLowerCase()];
-    }
-  }
+    },
+  },
 };
 </script>
 

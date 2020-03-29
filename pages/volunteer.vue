@@ -86,14 +86,14 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
   components: {
     ContentColumn,
     HeroStripe,
-    LoadingSpinner
+    LoadingSpinner,
   },
   mixins: [head],
-  data: () => ({ page: null })
+  data: () => ({ page: null }),
 };
 </script>

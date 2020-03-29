@@ -8,14 +8,14 @@
 export default {
   props: {
     ratio: {
-      type: String
-    }
+      type: String,
+    },
   },
   computed: {
     aspectRatio() {
       return this.ratio && `--aspect-ratio: ${this.ratio}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

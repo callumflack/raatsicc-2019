@@ -1,13 +1,11 @@
 /*
- * https://next.tailwindcss.com/docs/installation
- *
- * @tailwind directives cannot come before @import so they exist in seperate
- * files under `tailwind/`
+    https://next.tailwindcss.com/docs/installation
  */
 
-
-/* Tailwind base & components */
-@import "./tailwind/base.css";
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
 
 /* Custom components */
 @import "./theme/font-face";
@@ -22,11 +20,10 @@
 @import "./theme/layout-container";
 @import "./theme/layout-section";
 @import "./theme/loading";
+/* purgecss start ignore */
 @import "./theme/page-transitions";
-
-/* Tailwind utils */
-@import "./tailwind/utilities.css";
-
-/* Custom utils */
+/* purgecss end ignore */
 @import "./theme/typography-spacing";
 @import "./theme/aria";
+
+@import "tailwindcss/utilities";

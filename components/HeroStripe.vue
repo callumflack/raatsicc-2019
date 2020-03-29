@@ -11,18 +11,18 @@ import ImageDynamic from "~/components/ImageDynamic";
 
 export default {
   components: {
-    ImageDynamic
+    ImageDynamic,
   },
   props: {
     image: String,
     alt: String,
-    color: String
+    color: String,
   },
   computed: {
     rootClasses() {
       return this.color && `bg-brand-${this.color}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

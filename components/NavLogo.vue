@@ -18,8 +18,8 @@ import IconLogotype from "~/components/IconLogotype";
 
 export default {
   components: {
-    IconLogotype
-  }
+    IconLogotype,
+  },
 };
 </script>
 

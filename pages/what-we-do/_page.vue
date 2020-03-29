@@ -31,23 +31,23 @@ export default {
       `,
       prefetch({ route }) {
         return {
-          slug: route.params.page
+          slug: route.params.page,
         };
       },
       variables() {
         return {
-          slug: this.$route.params.page
+          slug: this.$route.params.page,
         };
-      }
-    }
+      },
+    },
   },
   components: {
     ContentColumn,
     HeroBlocksWhat,
-    LoadingSpinner
+    LoadingSpinner,
   },
   mixins: [head],
-  data: () => ({ page: null })
+  data: () => ({ page: null }),
 };
 </script>
 

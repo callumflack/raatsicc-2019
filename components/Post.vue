@@ -93,8 +93,8 @@ export default {
     eventTitle: String,
     eventDate: String,
     eventIsNotOneDay: Boolean,
-    eventLocation: String
-  }
+    eventLocation: String,
+  },
 };
 </script>
 

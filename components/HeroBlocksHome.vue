@@ -21,7 +21,7 @@ import HeroBlock from "~/components/HeroBlock.vue";
 
 export default {
   components: {
-    HeroBlock
+    HeroBlock,
   },
   data() {
     return {
@@ -32,7 +32,7 @@ export default {
           image:
             "https://www.datocms-assets.com/11614/1557789763-block-bw-flying.jpg?w=500&q=40&auto=format",
           color: "red",
-          cta: "On location since 1990"
+          cta: "On location since 1990",
         },
         {
           label: "What we do",
@@ -40,7 +40,7 @@ export default {
           image:
             "https://www.datocms-assets.com/11614/1557789774-block-bw-looking.jpg?w=500&q=40&auto=format",
           color: "green",
-          cta: "Our four core services"
+          cta: "Our four core services",
         },
         {
           label: "Join & contribute",
@@ -49,7 +49,7 @@ export default {
             "https://www.datocms-assets.com/11614/1557790416-handprint.png?w=500&q=40&fm=png&auto=format",
           color: "",
           cta: "Volunteer with us",
-          ctaReposition: true
+          ctaReposition: true,
         },
         {
           label: "See our events",
@@ -57,11 +57,11 @@ export default {
           image:
             "https://www.datocms-assets.com/11614/1557789749-block-bw-dancing.jpg?w=500&q=40&auto=format",
           color: "blue",
-          cta: "Come join us"
-        }
-      ]
+          cta: "Come join us",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

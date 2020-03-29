@@ -10,12 +10,12 @@ export default {
   props: {
     href: {
       type: String,
-      default: null
+      default: null,
     },
     to: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   computed: {
     type() {
@@ -29,7 +29,7 @@ export default {
     },
     target() {
       return this.href ? "_blank" : "";
-    }
-  }
+    },
+  },
 };
 </script>

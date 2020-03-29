@@ -13,11 +13,11 @@ export default {
       const json = await response.json();
       console.log(json);
       await stripe.redirectToCheckout({
-        sessionId: json.session.id
+        sessionId: json.session.id,
       });
       // `redirectToCheckout` may fail due to a browser or network error
-    }
-  }
+    },
+  },
 };
 </script>
 

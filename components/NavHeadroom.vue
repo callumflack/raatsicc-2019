@@ -14,8 +14,8 @@ export default {
   components: {
     headroom,
     NavTop,
-    NavTopMobile
-  }
+    NavTopMobile,
+  },
 };
 </script>
 

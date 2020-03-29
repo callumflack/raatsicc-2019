@@ -19,10 +19,7 @@
           >
             <div class="container h-ful">
               <div class="container-inner">
-                <NavList
-                  class="Modal-nav"
-                  :class="mobileNavOpen && 'is-active'"
-                />
+                <NavList class="Modal-nav" :class="mobileNavOpen && 'is-active'" />
               </div>
             </div>
           </Modal>
@@ -41,7 +38,7 @@ export default {
   components: {
     MainMenuBurgerButton,
     Modal,
-    NavList
+    NavList,
   },
   data: () => ({ mobileNavOpen: null }),
   watch: {
@@ -51,14 +48,14 @@ export default {
         this.$refs.burger.toggle();
       }
       this.mobileNavOpen = false;
-    }
+    },
   },
   methods: {
     toggleMobileNav() {
       // Disable scrolling is handled by Modal
       this.mobileNavOpen = !this.mobileNavOpen;
-    }
-  }
+    },
+  },
 };
 </script>
 

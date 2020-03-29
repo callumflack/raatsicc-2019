@@ -7,5 +7,5 @@ import "~/components/icons";
 Vue.use(SvgIcon, {
   tagName: "icon",
   defaultWidth: "1.125em",
-  defaultHeight: "1.125em"
+  defaultHeight: "1.125em",
 });

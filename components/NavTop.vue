@@ -15,8 +15,8 @@
         <!-- acronymn & list -->
         <div class="hidden sm:block sm:w-4/5 lg:w-3/4">
           <h1 class="Nav-acronym text-brand-primary sm:w-4/5 lg:w-3/4">
-            Cape York/Gulf Remote Area Aboriginal and Torres Strait Islander
-            Child Care Advisory Association Inc.
+            Cape York/Gulf Remote Area Aboriginal and Torres Strait Islander Child Care
+            Advisory Association Inc.
             <!-- <span class="font-bold text-gray-900">
               &nbsp;/ Protecting Kids Our Way.
             </span> -->
@@ -41,7 +41,7 @@ export default {
   components: {
     NavList,
     NavLogo,
-    DonationButton
+    DonationButton,
   },
   computed: {
     /* currentPageClass() {
@@ -75,8 +75,8 @@ export default {
         return "News archive";
       }
       return this.$route.name;
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -52,8 +52,8 @@ export default {
     program: String,
     pdf: String,
     date: String,
-    note: String
-  }
+    note: String,
+  },
 };
 </script>
 

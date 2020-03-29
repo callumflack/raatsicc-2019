@@ -15,8 +15,8 @@
             <cite class="not-italic">Asta Naden</cite>
           </div>
           <p>
-            We are looking for committed and self-motivated workers to deliver
-            quality RAATSICC programs in the …
+            We are looking for committed and self-motivated workers to deliver quality
+            RAATSICC programs in the …
             <span>Continue reading</span>
           </p>
         </div>

@@ -75,7 +75,7 @@ export default {
     ContentColumn,
     ImageDynamic,
     LoadingSpinner,
-    LocationColumn
+    LocationColumn,
   },
   mixins: [head],
   apollo: {
@@ -85,14 +85,14 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
   data() {
     return {
       contacts: this.$store.state.contactData,
-      page: null
+      page: null,
     };
-  }
+  },
 };
 </script>
 

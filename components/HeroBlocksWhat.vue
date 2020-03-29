@@ -21,7 +21,7 @@ import WhatPage from "~/data/what-page";
 
 export default {
   components: {
-    HeroBlock
+    HeroBlock,
   },
   data() {
     return {
@@ -29,8 +29,8 @@ export default {
         To reduce complexity, this data isn't from Dato.
         It's just a nice, quick .json.
       */
-      WhatPage
+      WhatPage,
     };
-  }
+  },
 };
 </script>

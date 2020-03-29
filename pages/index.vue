@@ -83,7 +83,7 @@ export default {
     ContentColumn,
     HeroBlocksHome,
     LoadingSpinner,
-    PostExcerpt
+    PostExcerpt,
   },
   mixins: [head],
   apollo: {
@@ -110,8 +110,8 @@ export default {
           ${metaTagsQuery}
         }
       }
-    `
+    `,
   },
-  data: () => ({ allPosts: [], page: null })
+  data: () => ({ allPosts: [], page: null }),
 };
 </script>
