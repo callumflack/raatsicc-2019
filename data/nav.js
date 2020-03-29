@@ -3,27 +3,27 @@ export default {
     {
       label: "Home",
       link: "/",
-      exact: true
+      exact: true,
     },
     {
       label: "About",
-      link: "/about"
+      link: "/about",
     },
     {
       label: "What we do",
-      link: "/what-we-do"
+      link: "/what-we-do",
     },
     {
       label: "News",
-      link: "/news"
+      link: "/news",
     },
     {
       label: "Jobs",
-      link: "/news/jobs"
+      link: "/news/jobs",
     },
     {
       label: "Contact",
-      link: "/contact"
-    }
-  ]
+      link: "/contact",
+    },
+  ],
 };
