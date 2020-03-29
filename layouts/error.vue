@@ -10,11 +10,15 @@
           Go Back Home
         </NuxtLink>
       </div>
-      <div v-else>
+      <!-- <div v-else>
         <div class="Title st-h s-2xh">{{ message }}</div>
         <p v-if="debug" class="description">
           {{ messages.client_error_details }}
         </p>
+      </div> -->
+      <div v-else>
+        <h1>An error occurred</h1>
+        <nuxt-link to="/" class="Link">Return To Home Page</nuxt-link>
       </div>
     </div>
   </div>
@@ -29,6 +33,14 @@ export default {
       default: null
     }
   },
+  computed: {
+    statusCode() {
+      return (this.error && this.error.statusCode) || 500;
+    }
+    // message() {
+    //   return this.error.message || this.messages.client_error;
+    // }
+  },
   head() {
     return {
       title: this.message,
@@ -40,14 +52,6 @@ export default {
         }
       ]
     };
-  },
-  computed: {
-    statusCode() {
-      return (this.error && this.error.statusCode) || 500;
-    },
-    message() {
-      return this.error.message || this.messages.client_error;
-    }
   }
 };
 </script>
