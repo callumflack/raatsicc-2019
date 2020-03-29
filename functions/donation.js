@@ -13,7 +13,7 @@ exports.handler = async function() {
     line_items: [
       {
         name: "Donation",
-        amount: 500,
+        amount: 1000,
         currency: "AUD",
         quantity: 1
       }
