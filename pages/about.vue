@@ -34,6 +34,9 @@
       </div>
     </ContentColumn>
     <ContentColumn v-if="page" id="member" text>
+      <div class="Markdown" v-html="$md.render(page.strategy)" />
+    </ContentColumn>
+    <ContentColumn v-if="page" id="member" text>
       <div class="Markdown" v-html="$md.render(page.membership)" />
     </ContentColumn>
   </div>
@@ -61,6 +64,7 @@ export default {
           story
           team
           membership
+          strategy
           teamGrid {
             # dato modular record type
             # …which contains team_manager records
