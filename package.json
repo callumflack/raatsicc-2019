@@ -28,6 +28,7 @@
     "dotenv": "^8.2.0",
     "graphql-tag": "^2.10.3",
     "markdown-it-attrs": "^3.0.2",
+    "markdown-it-link-attributes": "^3.0.0",
     "netlify-lambda": "1.6.3",
     "node-fetch": "2.6.0",
     "nuxt": "^2.12.1",

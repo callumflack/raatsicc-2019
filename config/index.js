@@ -8,7 +8,10 @@
 export default {
   PROD: process.env.NODE_ENV === "production",
 
-  /* Meta */
+  // Dato <> Nuxt Static preview?
+  PREVIEW: false,
+
+  // Meta
   SITE_URL: "https://www.raatsicc.org.au",
 
   // Read only token

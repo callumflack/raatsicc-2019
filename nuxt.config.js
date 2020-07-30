@@ -25,9 +25,9 @@ const apolloClient = new ApolloClient({
 module.exports = {
   mode: "universal",
 
-  /*
-   ** Headers of the page
-   */
+  // https://nuxtjs.org/blog/going-full-static
+  // target: "static",
+
   head: {
     title: "RAATSICC | Protecting Kids Our Way since 1990",
     meta: [
@@ -56,31 +56,22 @@ module.exports = {
     },
   },
 
-  /*
-   ** Customize the progress-bar color
-   */
+  // https://github.com/nuxt/components
+  // components: true,
+
   loading: { color: "#d66633" },
 
-  /*
-   ** Global CSS
-   */
   css: [],
 
   // https://github.com/nuxt-community/tailwindcss-module
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
-    purgeCSSInDev: false,
     exposeConfig: false,
-    purgeCSS: {
-      // whitelist: ["svg-icon", "svg-fill"],
-      // paths: ['components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue']
-    },
   },
 
-  /*
-   ** Plugins to load before mounting the App
-   */
+  // Plugins to load before mounting the App
   plugins: [
+    "~/plugins/preview.client.js",
     "~/plugins/vue-headroom",
     "@/plugins/vue-moment",
     "~/plugins/vue-svgicon",
@@ -90,9 +81,6 @@ module.exports = {
     },
   ],
 
-  /*
-   ** Nuxt.js modules
-   */
   modules: [
     "@nuxtjs/dotenv",
     "@nuxtjs/apollo",
@@ -139,47 +127,46 @@ module.exports = {
     },
   },
 
-  axios: {},
+  // axios: {},
 
   markdownit: {
     injected: true,
     html: true,
     linkify: true,
-    use: ["markdown-it-attrs"],
+    use: [
+      "markdown-it-attrs",
+      [
+        "markdown-it-link-attributes",
+        {
+          attrs: {
+            target: "_blank",
+            rel: "noopener",
+          },
+        },
+      ],
+    ],
   },
 
-  /* https://github.com/nuxt-community/sitemap-module */
+  // https://github.com/nuxt-community/sitemap-module
   sitemap: {
     hostname: config.SITE_URL,
   },
 
-  /*
-   ** Build configuration: extend webpack config here
-   */
-  build: {
-    postcss: {
-      // Add plugin names as key and arguments as value
-      // Disable a plugin by passing false as value
-      plugins: [
-        require("postcss-import"),
-        require("tailwindcss")("./tailwind.config.js"),
-      ],
-    },
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/,
-        });
-      }
-    },
-  },
+  // build: {
+  //   // extend webpack
+  //   // extend(config, ctx) {},
+  //   // https://nuxtjs.org/faq/webpack-plugins/
+  //   plugins: [
+  //     new webpack.ProvidePlugin({
+  //       // global modules
+  //       _: "lodash",
+  //     }),
+  //   ],
+  // },
 
   generate: {
-    fallback: "404.html",
+    // Generate 404.html page as fallback
+    fallback: true,
     async routes() {
       const data = await apolloClient.query({
         query: gql`
