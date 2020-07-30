@@ -31,7 +31,7 @@ export default {
           to: "/about",
           image:
             "https://www.datocms-assets.com/11614/1557789763-block-bw-flying.jpg?w=500&q=40&auto=format",
-          color: "red",
+          color: "bg-brand-red",
           cta: "On location since 1990",
         },
         {
@@ -39,7 +39,7 @@ export default {
           to: "/what-we-do",
           image:
             "https://www.datocms-assets.com/11614/1557789774-block-bw-looking.jpg?w=500&q=40&auto=format",
-          color: "green",
+          color: "bg-brand-green",
           cta: "Our four core services",
         },
         {
@@ -56,7 +56,7 @@ export default {
           to: "/news/events",
           image:
             "https://www.datocms-assets.com/11614/1557789749-block-bw-dancing.jpg?w=500&q=40&auto=format",
-          color: "blue",
+          color: "bg-brand-blue",
           cta: "Come join us",
         },
       ],
