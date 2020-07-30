@@ -29,28 +29,28 @@ export default {
           href: "#story",
           image:
             "https://www.datocms-assets.com/11614/1557789783-block-bw-team.jpg?w=500&q=40&auto=format",
-          color: "red",
+          color: "bg-brand-red",
         },
         {
           label: "Management Committee",
           href: "#team",
           image:
             "https://www.datocms-assets.com/11614/1557789770-block-bw-handprint.jpg?w=500&q=40&auto=format",
-          color: "green",
+          color: "bg-brand-green",
         },
         {
           label: "Our Constitution",
           href: "#constitution",
           image:
             "https://www.datocms-assets.com/11614/1557789780-block-bw-table.jpg?w=500&q=40&auto=format",
-          color: "blue",
+          color: "bg-brand-blue",
         },
         {
           label: "Become a Member",
           href: "#member",
           image:
             "https://www.datocms-assets.com/11614/1557789783-block-bw-team.jpg?w=500&q=40&auto=format",
-          color: "orange",
+          color: "bg-brand-orange",
         },
       ],
     };

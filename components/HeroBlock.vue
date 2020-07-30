@@ -48,7 +48,8 @@ export default {
   computed: {
     rootClasses() {
       return [
-        this.color && `bg-brand-${this.color}`,
+        // this.color && `bg-brand-${this.color}`,
+        this.color,
         // this doesn't fuck work WTF?
         // this.to === this.$route.params.page && "is-active"
       ];
