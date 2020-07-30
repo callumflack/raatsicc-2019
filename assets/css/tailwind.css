@@ -8,7 +8,6 @@
 /* purgecss end ignore */
 
 @import "./theme/font-face";
-@import "./theme/icon";
 @import "./theme/button";
 @import "./theme/typography-scale";
 @import "./theme/typography-text";
@@ -20,6 +19,7 @@
 @import "./theme/layout-section";
 @import "./theme/loading";
 /* purgecss start ignore */
+@import "./theme/icon";
 @import "./theme/page-transitions";
 /* purgecss end ignore */
 @import "./theme/typography-spacing";
