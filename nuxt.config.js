@@ -147,6 +147,16 @@ module.exports = {
     ],
   },
 
+  // https://github.com/Timkor/nuxt-polyfill
+  polyfill: {
+    features: [
+      {
+        require: "intersection-observer",
+        detect: () => "IntersectionObserver" in window,
+      },
+    ],
+  },
+
   // https://github.com/nuxt-community/sitemap-module
   sitemap: {
     hostname: config.SITE_URL,

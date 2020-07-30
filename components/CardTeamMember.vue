@@ -28,7 +28,9 @@ export default {
 
 <style lang="postcss" scoped>
 .Card:nth-of-type(2),
-.Card:nth-of-type(3) {
+.Card:nth-of-type(3),
+.Card:nth-of-type(5),
+.Card:nth-of-type(6) {
   @apply mb-3;
 }
 
@@ -50,7 +52,9 @@ export default {
 
 @screen sm {
   .Card:nth-of-type(2),
-  .Card:nth-of-type(3) {
+  .Card:nth-of-type(3),
+  .Card:nth-of-type(5),
+  .Card:nth-of-type(6) {
     @apply mb-4;
   }
 }

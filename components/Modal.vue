@@ -20,7 +20,7 @@ export default {
     show: {
       // this watcher will run when first instaniated
       immediate: true,
-      handler: function(show) {
+      handler: function (show) {
         if (show) {
           this.preventBackgroundScrolling &&
             document.body.style.setProperty("overflow", "hidden");
@@ -32,7 +32,7 @@ export default {
     },
   },
   created() {
-    const escapeHandler = e => {
+    const escapeHandler = (e) => {
       if (e.key === "Escape" && this.show) {
         this.dismiss();
       }

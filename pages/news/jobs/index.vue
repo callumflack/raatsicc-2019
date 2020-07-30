@@ -83,7 +83,7 @@ export default {
     posts() {
       // map, reduce or filter:
       // return this.allPosts.filter(x => x.tags[0] === "job");
-      return this.allPosts.filter(x => x.isJob).slice(0, 9);
+      return this.allPosts.filter((x) => x.isJob).slice(0, 9);
     },
   },
 };

@@ -63,7 +63,7 @@ export default {
   computed: {
     posts() {
       // map, reduce or filter:
-      return this.allPosts.filter(x => x.isStaff).slice(0, 9);
+      return this.allPosts.filter((x) => x.isStaff).slice(0, 9);
     },
   },
 };

@@ -42,7 +42,7 @@ export default {
     },
     size: {
       type: String,
-      validator: function(value) {
+      validator: function (value) {
         return ["xs", "s", "m", "l", "xl"].indexOf(value) !== -1;
       },
       default: "m",
@@ -56,14 +56,14 @@ export default {
   },
 
   computed: {
-    layerStyle: function() {
+    layerStyle: function () {
       return {
         "background-color": this.active ? this._activeColor : this.color,
       };
     },
   },
 
-  created: function() {
+  created: function () {
     this.burgerTypeClass = `hamburger--${this.type}`;
     this._activeColor = this.activeColor || this.color;
 
