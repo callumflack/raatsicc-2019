@@ -1,5 +1,5 @@
 /*
-    https://next.tailwindcss.com/docs/installation
+  https://next.tailwindcss.com/docs/installation
  */
 
 /* purgecss start ignore */
@@ -7,7 +7,6 @@
 @import 'tailwindcss/components';
 /* purgecss end ignore */
 
-/* Custom components */
 @import "./theme/font-face";
 @import "./theme/icon";
 @import "./theme/button";
