@@ -30,7 +30,7 @@
     "markdown-it-attrs": "^3.0.3",
     "markdown-it-link-attributes": "^3.0.0",
     "netlify-lambda": "2.0.1",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.1",
     "nuxt": "^2.14.0",
     "nuxt-polyfill": "^1.0.3",
     "portal-vue": "^2.1.7",
