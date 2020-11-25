@@ -56,8 +56,8 @@ module.exports = {
     },
   },
 
-  // https://github.com/nuxt/components
-  // components: true,
+  // See https://nuxtjs.org/api/configuration-components
+  components: true,
 
   loading: { color: "#d66633" },
 
@@ -194,10 +194,10 @@ module.exports = {
       });
 
       const whatWeDoRoutes = data.data.allWhatSubpages.map(
-        page => `/what-we-do/${page.slug}`
+        (page) => `/what-we-do/${page.slug}`
       );
 
-      const postRoutes = data.data.allPosts.map(page => `/news/${page.slug}`);
+      const postRoutes = data.data.allPosts.map((page) => `/news/${page.slug}`);
 
       return [...whatWeDoRoutes, ...postRoutes];
     },

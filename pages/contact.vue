@@ -58,25 +58,11 @@
 </template>
 
 <script>
-import Aspect from "~/components/Aspect";
-import CardCta from "~/components/CardCta";
-import ContentColumn from "~/components/ContentColumn";
-import ImageDynamic from "~/components/ImageDynamic";
-import LoadingSpinner from "~/components/LoadingSpinner.vue";
-import LocationColumn from "~/components/LocationColumn";
 // import locations from "~/data/locations";
 import gql from "graphql-tag";
 import head, { metaTagsQuery } from "~/mixins/head";
 
 export default {
-  components: {
-    Aspect,
-    CardCta,
-    ContentColumn,
-    ImageDynamic,
-    LoadingSpinner,
-    LocationColumn,
-  },
   mixins: [head],
   apollo: {
     page: gql`
