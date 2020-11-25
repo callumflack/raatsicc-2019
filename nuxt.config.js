@@ -23,10 +23,10 @@ const apolloClient = new ApolloClient({
 });
 
 module.exports = {
-  mode: "universal",
+  // mode: "universal",
 
   // https://nuxtjs.org/blog/going-full-static
-  // target: "static",
+  target: "static",
 
   head: {
     title: "RAATSICC | Protecting Kids Our Way since 1990",
@@ -97,8 +97,6 @@ module.exports = {
     // "@nuxtjs/gtm",
     // Doc: https://github.com/nuxt-community/eslint-module
     "@nuxtjs/eslint-module",
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    "@nuxtjs/stylelint-module",
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
   ],
