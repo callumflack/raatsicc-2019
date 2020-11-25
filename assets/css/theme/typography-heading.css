@@ -46,5 +46,5 @@
 .Markdown h5,
 .Metalede {
   @apply font-sans font-medium;
-  font-size: calc(theme(fontSize.text-xl) * var(--text-ratio));
+  font-size: calc(theme(fontSize.xl) * var(--text-ratio));
 }

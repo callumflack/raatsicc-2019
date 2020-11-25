@@ -1,26 +1,25 @@
-import pkg from "./package";
 import config from "./config";
-import { ApolloClient } from "apollo-client";
-import { InMemoryCache } from "apollo-cache-inmemory";
-import { createHttpLink } from "apollo-link-http";
-import apolloConfig from "./apollo/config";
-import fetch from "node-fetch";
-import gql from "graphql-tag";
+// import { ApolloClient } from "apollo-client";
+// import { InMemoryCache } from "apollo-cache-inmemory";
+// import { createHttpLink } from "apollo-link-http";
+// import apolloConfig from "./apollo/config";
+// import fetch from "node-fetch";
+// import gql from "graphql-tag";
 
 const baseURL = config.PROD ? config.SITE_URL : "http://localhost";
 
 // Apollo client for fetching list of routes to generate
-const apolloConfigData = apolloConfig();
-const apolloClient = new ApolloClient({
-  link: createHttpLink({
-    uri: apolloConfigData.httpEndpoint,
-    headers: {
-      Authorization: apolloConfigData.getAuth(),
-    },
-    fetch,
-  }),
-  cache: new InMemoryCache(),
-});
+// const apolloConfigData = apolloConfig();
+// const apolloClient = new ApolloClient({
+//   link: createHttpLink({
+//     uri: apolloConfigData.httpEndpoint,
+//     headers: {
+//       Authorization: apolloConfigData.getAuth(),
+//     },
+//     fetch,
+//   }),
+//   cache: new InMemoryCache(),
+// });
 
 module.exports = {
   // mode: "universal",
@@ -29,11 +28,17 @@ module.exports = {
   target: "static",
 
   head: {
+    htmlAttrs: { lang: "en" },
     title: "RAATSICC | Protecting Kids Our Way since 1990",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: pkg.description },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "News, events, jobs and information from the Cape York/Gulf Remote Area Aboriginal and Torres Strait Islander Child Care Advisory Association Inc.",
+      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     // preload a webfont
@@ -51,9 +56,6 @@ module.exports = {
     script: [
       { src: "https://js.stripe.com/v3/" }, // Used for the donation button
     ],
-    htmlAttrs: {
-      lang: "en",
-    },
   },
 
   // See https://nuxtjs.org/api/configuration-components
@@ -62,12 +64,6 @@ module.exports = {
   loading: { color: "#d66633" },
 
   css: [],
-
-  // https://github.com/nuxt-community/tailwindcss-module
-  tailwindcss: {
-    cssPath: "~/assets/css/tailwind.css",
-    exposeConfig: false,
-  },
 
   // Plugins to load before mounting the App
   plugins: [
@@ -160,44 +156,50 @@ module.exports = {
     hostname: config.SITE_URL,
   },
 
-  // build: {
-  //   // extend webpack
-  //   // extend(config, ctx) {},
-  //   // https://nuxtjs.org/faq/webpack-plugins/
-  //   plugins: [
-  //     new webpack.ProvidePlugin({
-  //       // global modules
-  //       _: "lodash",
-  //     }),
-  //   ],
-  // },
+  build: {
+    // Increase build times (experimental features)
+    // https://github.com/nuxt/nuxt.js/issues/5131#issuecomment-468231314
+    // cache: true,
+    parallel: true,
+    // hardSource: true,
+
+    // extend webpack
+    // extend(config, ctx) {},
+    // https://nuxtjs.org/faq/webpack-plugins/
+    // plugins: [
+    //   new webpack.ProvidePlugin({
+    //     // global modules
+    //     _: "lodash",
+    //   }),
+    // ],
+  },
 
   generate: {
     // Generate 404.html page as fallback
     fallback: true,
-    async routes() {
-      const data = await apolloClient.query({
-        query: gql`
-          {
-            allWhatSubpages {
-              slug
-            }
-            # default 20, max 100
-            # https://www.datocms.com/docs/content-delivery-api/pagination
-            allPosts(first: 100, orderBy: [datePublished_DESC]) {
-              slug
-            }
-          }
-        `,
-      });
+    // async routes() {
+    //   const data = await apolloClient.query({
+    //     query: gql`
+    //       {
+    //         allWhatSubpages {
+    //           slug
+    //         }
+    //         # default 20, max 100
+    //         # https://www.datocms.com/docs/content-delivery-api/pagination
+    //         allPosts(first: 100, orderBy: [datePublished_DESC]) {
+    //           slug
+    //         }
+    //       }
+    //     `,
+    //   });
 
-      const whatWeDoRoutes = data.data.allWhatSubpages.map(
-        (page) => `/what-we-do/${page.slug}`
-      );
+    //   const whatWeDoRoutes = data.data.allWhatSubpages.map(
+    //     (page) => `/what-we-do/${page.slug}`
+    //   );
 
-      const postRoutes = data.data.allPosts.map((page) => `/news/${page.slug}`);
+    //   const postRoutes = data.data.allPosts.map((page) => `/news/${page.slug}`);
 
-      return [...whatWeDoRoutes, ...postRoutes];
-    },
+    //   return [...whatWeDoRoutes, ...postRoutes];
+    // },
   },
 };

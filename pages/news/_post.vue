@@ -22,7 +22,7 @@
         :event-is-not-one-day="post.eventIsNotOneDay"
         :event-location="post.eventLocation"
       >
-        <template v-if="post.jobs" v-slot:jobs>
+        <template v-if="post.jobs" #jobs>
           <template v-for="(job, index) in post.jobs">
             <PostJob
               :key="index"

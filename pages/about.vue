@@ -24,9 +24,7 @@
     <ContentColumn v-if="page" id="constitution" text>
       <div class="Markdown">
         <h2>Our Constitution</h2>
-        <p>
-          Our Constitution holds our organisation standards. Read them in full:
-        </p>
+        <p>Our Constitution holds our organisation standards. Read them in full:</p>
         <p class="">
           <!-- prettier-ignore -->
           <nuxt-link to="/constitution" class="Button">Our Constitution</nuxt-link>

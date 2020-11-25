@@ -2,20 +2,20 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   globals: {
-    $nuxt: true
+    $nuxt: true,
   },
   parserOptions: {
-    parser: "babel-eslint"
+    parser: "babel-eslint",
     // parser: "vue-eslint-parser"
   },
   extends: [
     "plugin:vue/recommended",
     "eslint:recommended",
     "prettier/vue",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
   ],
   // required to lint *.vue files
   plugins: ["vue"],
@@ -38,9 +38,9 @@ module.exports = {
         singleline: 20,
         multiline: {
           max: 1,
-          allowFirstLine: false
-        }
-      }
-    ]
-  }
+          allowFirstLine: false,
+        },
+      },
+    ],
+  },
 };

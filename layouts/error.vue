@@ -33,14 +33,6 @@ export default {
       default: null,
     },
   },
-  computed: {
-    statusCode() {
-      return (this.error && this.error.statusCode) || 500;
-    },
-    // message() {
-    //   return this.error.message || this.messages.client_error;
-    // }
-  },
   head() {
     return {
       title: this.message,
@@ -52,6 +44,14 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    statusCode() {
+      return (this.error && this.error.statusCode) || 500;
+    },
+    // message() {
+    //   return this.error.message || this.messages.client_error;
+    // }
   },
 };
 </script>

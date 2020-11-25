@@ -9,9 +9,7 @@
         placeholder="Email"
         required
       />
-      <button class="Button Button--blue rounded-none">
-        Sign Up
-      </button>
+      <button class="Button Button--blue rounded-none">Sign Up</button>
     </form>
     <div v-if="successMsg" class="Form-validation is-good Button Button--input">
       <icon name="check-circle" class="mr-1" />

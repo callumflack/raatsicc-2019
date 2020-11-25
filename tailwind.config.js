@@ -18,9 +18,23 @@ module.exports = {
       "nuxt.config.js",
     ],
   },
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   theme: {
+    /*
+
+      EXTEND
+
+    */
     extend: {},
 
+    /*
+
+      OVERWRITES
+
+    */
     colors: {
       transparent: "transparent",
       black: "#000",
@@ -57,24 +71,24 @@ module.exports = {
     spacing: {
       px: "1px",
       "2px": "2px",
-      "0": "0",
-      "1": "0.3rem",
-      "2": "0.5rem",
-      "3": "0.75rem",
-      "4": "1rem",
-      "5": "1.25rem",
-      "6": "1.5rem",
-      "8": "2rem",
-      "10": "2.5rem",
-      "12": "3.25rem",
-      "16": "4rem",
-      "20": "5rem",
-      "24": "6rem",
-      "32": "8rem",
-      "40": "10rem",
-      "48": "12rem",
-      "56": "14rem",
-      "64": "16rem",
+      0: "0",
+      1: "0.3rem",
+      2: "0.5rem",
+      3: "0.75rem",
+      4: "1rem",
+      5: "1.25rem",
+      6: "1.5rem",
+      8: "2rem",
+      10: "2.5rem",
+      12: "3.25rem",
+      16: "4rem",
+      20: "5rem",
+      24: "6rem",
+      32: "8rem",
+      40: "10rem",
+      48: "12rem",
+      56: "14rem",
+      64: "16rem",
     },
     screens: {
       sm: "640px",
@@ -163,8 +177,8 @@ module.exports = {
       wider: "0.05em",
       widest: "0.1em",
     },
-    textColor: theme => theme("colors"),
-    backgroundColor: theme => theme("colors"),
+    textColor: (theme) => theme("colors"),
+    backgroundColor: (theme) => theme("colors"),
     backgroundPosition: {
       bottom: "bottom",
       center: "center",
@@ -183,12 +197,12 @@ module.exports = {
     },
     borderWidth: {
       default: "1px",
-      "0": "0",
-      "2": "2px",
-      "4": "4px",
-      "8": "8px",
+      0: "0",
+      2: "2px",
+      4: "4px",
+      8: "8px",
     },
-    borderColor: theme => ({
+    borderColor: (theme) => ({
       ...theme("colors"),
       default: theme("colors.gray.300", "currentColor"),
     }),
@@ -208,7 +222,7 @@ module.exports = {
       move: "move",
       "not-allowed": "not-allowed",
     },
-    width: theme => ({
+    width: (theme) => ({
       auto: "auto",
       ...theme("spacing"),
       "1/2": "50%",
@@ -240,18 +254,18 @@ module.exports = {
       full: "100%",
       screen: "100vw",
     }),
-    height: theme => ({
+    height: (theme) => ({
       auto: "auto",
       ...theme("spacing"),
       full: "100%",
       screen: "100vh",
     }),
     minWidth: {
-      "0": "0",
+      0: "0",
       full: "100%",
     },
     minHeight: {
-      "0": "0",
+      0: "0",
       full: "100%",
       screen: "100vh",
     },
@@ -272,7 +286,7 @@ module.exports = {
       full: "100%",
       screen: "100vh",
     },
-    padding: theme => theme("spacing"),
+    padding: (theme) => theme("spacing"),
     margin: (theme, { negative }) => ({
       auto: "auto",
       ...theme("spacing"),
@@ -301,19 +315,19 @@ module.exports = {
     },
     zIndex: {
       auto: "auto",
-      "0": "0",
-      "10": "10",
-      "20": "20",
-      "30": "30",
-      "40": "40",
-      "50": "50",
+      0: "0",
+      10: "10",
+      20: "20",
+      30: "30",
+      40: "40",
+      50: "50",
     },
     opacity: {
-      "0": "0",
-      "25": "0.25",
-      "50": "0.5",
-      "75": "0.75",
-      "100": "1",
+      0: "0",
+      25: "0.25",
+      50: "0.5",
+      75: "0.75",
+      100: "1",
     },
     fill: {
       current: "currentColor",
@@ -322,35 +336,35 @@ module.exports = {
       current: "currentColor",
     },
     flex: {
-      "1": "1 1 0%",
+      1: "1 1 0%",
       auto: "1 1 auto",
       initial: "0 1 auto",
       none: "none",
     },
     flexGrow: {
-      "0": "0",
+      0: "0",
       default: "1",
     },
     flexShrink: {
-      "0": "0",
+      0: "0",
       default: "1",
     },
     order: {
       first: "-1",
       last: "999",
       none: "0",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10",
-      "11": "11",
-      "12": "12",
+      1: "1",
+      2: "2",
+      3: "3",
+      4: "4",
+      5: "5",
+      6: "6",
+      7: "7",
+      8: "8",
+      9: "9",
+      10: "10",
+      11: "11",
+      12: "12",
     },
     listStyleType: {
       none: "none",
@@ -358,7 +372,7 @@ module.exports = {
       decimal: "decimal",
     },
     inset: {
-      "0": "0",
+      0: "0",
       auto: "auto",
     },
     container: {
