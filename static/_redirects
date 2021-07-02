@@ -1,5 +1,13 @@
-# Redirect default Netlify subdomain to primary domain
-https://raatsicc.netlify.com/* https://www.raatsicc.org.au/:splat 301!
+# Update service paths 210702
+/what-we-do/corporate-unit /what-we-do/our-services 301!
+/what-we-do/pacs-unit /what-we-do/our-projects 301!
+/what-we-do/cars-unit /what-we-do/resources 301!
+/what-we-do/flaic-unit /what-we-do/client-service-chart 301!
+
 
 # clean URLs in your Netlify deployed SPAs
-/* /index.html 200
+# /* /index.html 200
+
+##### GENERAL RULES LAST #####
+# Redirect default Netlify subdomain to primary domain
+https://raatsicc.netlify.com/* https://www.raatsicc.org.au/:splat 301!
