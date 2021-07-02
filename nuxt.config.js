@@ -40,10 +40,9 @@ module.exports = {
           "News, events, jobs and information from the Cape York/Gulf Remote Area Aboriginal and Torres Strait Islander Child Care Advisory Association Inc.",
       },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-    // preload a webfont
-    // eslint-disable-next-line no-dupe-keys
     link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      // preload a webfont
       {
         rel: "preload",
         href: "/../../fonts/Malabar-LT-W01-Regular.woff",
