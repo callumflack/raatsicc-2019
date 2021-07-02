@@ -1,14 +1,14 @@
 export default {
   blocks: [
     {
-      label: "Corporate Unit",
+      label: "Our Services",
       to: "/what-we-do/corporate-unit",
       image:
         "https://www.datocms-assets.com/11614/1557298392-block-bw-fierce.jpg?w=500&q=40&auto=format",
       color: "bg-brand-red",
     },
     {
-      label: "PACS Unit",
+      label: "Our Projects",
       sublabel: "Program & Client Services",
       to: "/what-we-do/pacs-unit",
       image:
@@ -16,7 +16,7 @@ export default {
       color: "bg-brand-green",
     },
     {
-      label: "CARS Unit",
+      label: "Resources",
       sublabel: "Community Awareness, Resources & Support",
       to: "/what-we-do/cars-unit",
       image:
@@ -24,7 +24,7 @@ export default {
       color: "bg-brand-blue",
     },
     {
-      label: "FLAIC Unit",
+      label: "Compliments & Complaints",
       sublabel: "Financial Logistics and Internal Controls Unit",
       to: "/what-we-do/flaic-unit",
       image:
